@@ -5,5 +5,5 @@ function isTriangle(sideOne, sideTwo, sideThree) {
 }
 
 export {
-  isTriangle
+  isTriangle,
 };
