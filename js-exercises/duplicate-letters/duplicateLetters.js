@@ -9,7 +9,8 @@ function duplicateLetters(userInputWord) {
       letterCountMap[letter] = 1;
     }
   });
-  return Math.max(...Object.values(letterCountMap));
+  const maxDuplicatedLetterCount = Math.max(...Object.values(letterCountMap));
+  return maxDuplicatedLetterCount > 1 ? maxDuplicatedLetterCount : false;
 }
 
 export {
