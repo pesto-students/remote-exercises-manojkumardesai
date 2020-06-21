@@ -124,7 +124,7 @@ const App = () => {
         />
         {gameOver && <div>GAME OVER!</div>}
       </div>
-      <div>
+      <div className="gameControls">
         <p>Score: {score}</p>
         <button onClick={startGame}> { gameOver ? 'Restart' : 'Start Game' }</button>
         { score ? 
