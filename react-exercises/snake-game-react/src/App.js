@@ -8,6 +8,7 @@ import {
   SPEED,
   DIRECTIONS
 } from "./Configuration";
+import './App.css';
 
 const App = () => {
   const canvasRef = useRef();
@@ -113,17 +114,24 @@ const App = () => {
   }, [snake, coin, gameOver]);
 
   return (
-    <div role="button" tabIndex="0" onKeyDown={e => moveSnake(e)}>
-      <canvas
-        style={{ border: "1px solid black" }}
-        ref={canvasRef}
-        width={`${CANVAS_SIZE[0]}px`}
-        height={`${CANVAS_SIZE[1]}px`}
-      />
-      {gameOver && <div>GAME OVER!</div>}
-      <p>Score:{score}</p>
-      <button onClick={startGame}>Start Game</button>
-      <button onClick={pauseGame}>Pause / Resume </button>
+    <div className="gameBoard" role="button" tabIndex="0" onKeyDown={e => moveSnake(e)}>
+      <div>
+        <canvas
+          className="gameBorder"
+          ref={canvasRef}
+          width={`${CANVAS_SIZE[0]}px`}
+          height={`${CANVAS_SIZE[1]}px`}
+        />
+        {gameOver && <div>GAME OVER!</div>}
+      </div>
+      <div>
+        <p>Score:{score}</p>
+        <button onClick={startGame}> { gameOver ? 'Restart' : 'Start Game' }</button>
+        { score ? 
+          <button onClick={pauseGame}> {speed ? 'Pause' : 'Resume'} </button> :
+          null
+        }
+      </div>
     </div>
   );
 };
