@@ -2,7 +2,7 @@
 
 # Submission
 
-Game URL: _____
+Game URL: https://ekans.netlify.app/
 
 Mockup URL: _____
 

@@ -125,7 +125,7 @@ const App = () => {
         {gameOver && <div>GAME OVER!</div>}
       </div>
       <div>
-        <p>Score:{score}</p>
+        <p>Score: {score}</p>
         <button onClick={startGame}> { gameOver ? 'Restart' : 'Start Game' }</button>
         { score ? 
           <button onClick={pauseGame}> {speed ? 'Pause' : 'Resume'} </button> :
