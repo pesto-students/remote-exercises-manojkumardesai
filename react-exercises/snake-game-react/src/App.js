@@ -7,8 +7,9 @@ import {
   SCALE,
   SPEED,
   DIRECTIONS
-} from "./Configuration";
+} from "./components/Configuration";
 import './App.css';
+import GameTitle from "./components/GameTitle";
 
 const App = () => {
   const canvasRef = useRef();
@@ -114,7 +115,9 @@ const App = () => {
   }, [snake, coin, gameOver]);
 
   return (
-    <div className="gameBoard" role="button" tabIndex="0" onKeyDown={e => moveSnake(e)}>
+    <div>
+      <GameTitle />
+      <div className="gameBoard" onKeyDown={e => moveSnake(e)}>
       <div>
         <canvas
           className="gameBorder"
@@ -132,6 +135,7 @@ const App = () => {
           null
         }
       </div>
+    </div>
     </div>
   );
 };
