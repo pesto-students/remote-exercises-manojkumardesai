@@ -112,7 +112,7 @@ const App = () => {
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     context.fillStyle = "yellow";
     context.fillRect(coin[0], coin[1], 1, 1);
-  }, [snake, coin, gameOver]);
+  }, [canvasRef, snake, coin, gameOver]);
 
   return (
     <div>
