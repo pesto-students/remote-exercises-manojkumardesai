@@ -1,0 +1,12 @@
+.titleCard {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 255, .2);
+}

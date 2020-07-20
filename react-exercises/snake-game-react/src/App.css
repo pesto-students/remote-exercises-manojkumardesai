@@ -1,0 +1,18 @@
+.gameBoard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gameBorder {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.gameControls {
+    height: fit-content;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 6px 2px 1px rgba(0, 0, 255, .2);
+}
